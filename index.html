@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="form-style.css" />
-  </head>
-  <body>
-    <div class="image-section">
-      <div class="img-frame"></div>
-    </div>
-    <div class="login-info-section">
-      <h1 class="info">Put all your vbucks in here</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="form-style.css" />
+    </head>
+    <body>
+        <div class="image-section">
+            <div class="img-frame">
+                <div class="logo-container">
+                    <img
+                        src="./images/odin-lined.png"
+                        alt="logo"
+                        class="logo"
+                    />
+                    <span>Odin</span>
+                </div>
+            </div>
+        </div>
+        <div class="login-info-section">
+            <h1 class="info">Put all your vbucks in here</h1>
 
-      <form action="">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name" />
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Sign up</legend>
+                    <div class="input-group-container">
+                        <div class="input-group">
+                            <div class="label-input-container">
+                                <label for="first-name"
+                                    >First Name:
+                                    <abbr title="required">*</abbr></label
+                                >
+                                <input
+                                    type="text"
+                                    id="first-name"
+                                    name="first-name"
+                                    required="true"
+                                />
+                                <span></span>
+                            </div>
 
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last-name" />
+                            <div class="label-input-container">
+                                <label for="last-name"
+                                    >Last Name:
+                                    <abbr title="required">*</abbr></label
+                                >
+                                <input
+                                    type="text"
+                                    id="last-name"
+                                    name="last-name"
+                                    required="true"
+                                />
+                                <span></span>
+                            </div>
+                        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
-
-        <label for="phone-number">Phone Number</label>
-        <input type="tel" id="phone-number" name="phone-number" />
-
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" />
-
-        <label for="confirm-password"></label>
-        <input type="password" id="confirm-password" />
-      </form>
-
-      <button class="create-acc"></button>
-      <p>Already have an account?</p>
-      <a href="#" target="_blank">Log in</a>
-    </div>
-  </body>
+                        <div class="input-group">
+                            <div class="label-input-container">
+                                <label for="email"
+                                    >Email:
+                                    <abbr title="required">*</abbr></label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required="true"
+                                />
+                                <span></span>
+                            </div>
+                            <div class="label-input-container">
+                                <label for="phone-number">Phone Number:</label>
+                                <input
+                                    type="tel"
+                                    id="phone-number"
+                                    name="phone-number"
+                                />
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="label-input-container">
+                                <label for="confirm-password"
+                                    >Confirm Passoword:
+                                    <abbr title="required">*</abbr></label
+                                >
+                                <input
+                                    type="password"
+                                    id="confirm-password"
+                                    required="true"
+                                />
+                                <span></span>
+                            </div>
+                            <div class="label-input-container">
+                                <label for="password"
+                                    >Password:
+                                    <abbr title="required">*</abbr></label
+                                >
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    required="true"
+                                />
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit" class="create-acc">Create Account</button>
+                <p>
+                    Already have an account?
+                    <a href="#" target="_blank">Log in</a>
+                </p>
+            </form>
+        </div>
+    </body>
 </html>
