@@ -153,12 +153,12 @@ input:invalid + span::after {
     color: red;
 }
 
-input:invalid {
+input:invalid.error {
     border: none;
     outline: 1px solid red;
 }
 
-input:valid {
+input:valid.error {
     border: 1px solid lightgreen;
 }
 
@@ -166,20 +166,24 @@ input:optional {
     border: 1px solid silver;
 }
 
-input[id="first-name"]:invalid + span::after {
+input[id="first-name"]:invalid.error + span::after {
     content: "First Name Required";
 }
 
-input[id="last-name"]:invalid + span::after {
+input[id="last-name"]:invalid.error + span::after {
     content: "Last Name Required";
 }
 
-input[id="email"]:invalid + span::after {
+input[id="email"]:invalid.error + span::after {
     content: "Email Required";
 }
 
-input[type="password"]:invalid + span::after {
+input[type="password"]:invalid.error + span::after {
     content: "Password required";
+}
+
+input[type="password"]:invalid.error.matchingPasswordsFalse + span::after {
+    content: "Password does not match";
 }
 
 input:focus {
