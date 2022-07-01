@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 @font-face {
     font-family: logo-font;
@@ -25,7 +25,7 @@ body {
 }
 
 .img-frame {
-    background-image: url(./images/blurry-litty.jpg);
+    background-image: url(./images/the-lone-ocean-boat.jpg);
     background-size: 100% 100%;
     /* flex-basis: 650px; */
     height: 100vh;
@@ -136,6 +136,8 @@ a {
 
 input {
     border-radius: 4px;
+    padding: 0%;
+    margin: 0%;
     width: 235px;
     height: 20px;
     transition: 00.5s;
@@ -152,7 +154,8 @@ input:invalid + span::after {
 }
 
 input:invalid {
-    border: 1px solid red;
+    border: none;
+    outline: 1px solid red;
 }
 
 input:valid {
@@ -172,14 +175,21 @@ input[id="last-name"]:invalid + span::after {
 }
 
 input[id="email"]:invalid + span::after {
-    content: "Last Name Required";
+    content: "Email Required";
 }
 
 input[type="password"]:invalid + span::after {
     content: "Password required";
 }
 
-/* input:focus {
+input:focus {
+    border: none;
+    outline: 1px solid lightblue;
+    box-shadow: 1px 2px 3px grey;
+}
+
+/*  input:focus {
   width: 280px;
   height: 25px;
-} */
+} 
+ */
