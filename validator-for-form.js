@@ -1,23 +1,28 @@
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 
-const email = document.querySelector("#email");
+const password = document.querySelector("#password");
+const confirmPassword = document.querySelector("#confirm-password");
 
+const email = document.querySelector("#email");
 const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const form = document.getElementById("form");
 const submitButton = document.querySelector(".create-acc");
+
 form.addEventListener("submit", (event) => {
     nameValidation(event);
     emailValidation(event);
+    passwordValidation(event);
 });
 submitButton.addEventListener("click", (event) => {
     nameValidation(event);
     emailValidation(event);
+    passwordValidation(event);
 });
 
-/* check first and last name is not empty */
+/* makes sure that first and last name is not empty */
 function nameValidation(event) {
     const firstNameValue = firstName.value.trim();
     const lastNameValue = lastName.value.trim();
@@ -48,4 +53,11 @@ function emailValidation(event) {
         email.classList.add("error", "invalidEmailAddress");
         event.preventDefault();
     }
+}
+
+function errorCssStyling() {
+    const requiredInputs = document.querySelectorAll("input[required='true']");
+    requiredInputs.forEach((input) => {
+        input.classList.add("error");
+    });
 }
