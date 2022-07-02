@@ -178,6 +178,10 @@ input[id="email"]:invalid.error + span::after {
     content: "Email Required";
 }
 
+input[id="email"]:invalid.error.invalidEmailAddress + span::after {
+    content: "Invalid email address";
+}
+
 input[type="password"]:invalid.error + span::after {
     content: "Password required";
 }
