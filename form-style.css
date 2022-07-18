@@ -53,6 +53,28 @@ body {
     width: auto;
 }
 
+.credits {
+    position: relative;
+    top: 727px;
+    left: 137px;
+
+    font-weight: 900;
+    font-size: 12px;
+
+    color: azure;
+    opacity: 0.8;
+}
+
+#credit-link {
+    color: white;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+#credit-link:hover {
+    opacity: 1;
+}
+
 .login-info-section {
     display: flex;
     flex-direction: column;
@@ -186,8 +208,17 @@ input[type="password"]:invalid.error + span::after {
     content: "Password required";
 }
 
-input[type="password"]:invalid.error.matchingPasswordsFalse + span::after {
+input[type="password"]#confirm-password.error.matchingPasswordsFalse
+    + span::after {
     content: "Password does not match";
+    font: 900;
+    font-size: 10px;
+    color: red;
+}
+
+#confirm-password.error.matchingPasswordsFalse {
+    border: none;
+    outline: 1px solid red;
 }
 
 input:focus {
